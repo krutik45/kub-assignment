@@ -23,7 +23,7 @@ steps:
     args:
       - "-c"
       - |
-        gcloud container clusters get-credentials k8s-standard-cluster --region us-central1-c
+        gcloud container clusters get-credentials kub-assignment-cluster --region us-central1-c
 
   # Step 4: Deploy the Container 1 application to the Kubernetes cluster
   - name: "gcr.io/cloud-builders/gke-deploy"
@@ -34,7 +34,7 @@ steps:
         "--filename=container1-deployment.yaml",
         "--image=us-central1-docker.pkg.dev/kubassignment-441102/kub-assignment/kubcontainer1",
         "--location=us-central1-c",
-        "--cluster=k8s-standard-cluster",
+        "--cluster=kub-assignment-cluster",
       ]
 
 images:
