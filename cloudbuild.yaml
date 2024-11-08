@@ -1,5 +1,4 @@
 steps:
-  # Step 1: Build the Docker image for Container 1
   - name: "gcr.io/cloud-builders/docker"
     args:
       [
@@ -9,7 +8,6 @@ steps:
         "kubcontainer1",
       ]
 
-  # Step 2: Push the Docker image to Google Container Registry
   - name: "gcr.io/cloud-builders/docker"
     args:
       [
@@ -17,7 +15,6 @@ steps:
         "us-central1-docker.pkg.dev/kubassignment-441102/kub-assignment/kubcontainer1",
       ]
 
-  # Step 3: Configure cluster credentials
   - name: "gcr.io/cloud-builders/gcloud"
     entrypoint: "bash"
     args:
@@ -25,7 +22,6 @@ steps:
       - |
         gcloud container clusters get-credentials kub-assignment-cluster --region us-central1
 
-  # Step 4: Deploy the Container 1 application to the Kubernetes cluster
   - name: "gcr.io/cloud-builders/gke-deploy"
     id: Deployment
     args:
