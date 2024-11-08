@@ -31,7 +31,7 @@ steps:
     args:
       [
         "run",
-        "--filename=deployment-kubcontainer1",
+        "--filename=deployment-kubcontainer1.yaml",
         "--image=us-central1-docker.pkg.dev/kubassignment-441102/kub-assignment/kubcontainer1",
         "--location=us-central1",
         "--cluster=kub-assignment-cluster",
