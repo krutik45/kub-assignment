@@ -30,7 +30,7 @@ def store_file():
         file_name = json_data['file']
         data = json_data['data']
 
-        directory = '/file_Dir/'
+        directory = '/krutik_PV_dir/'
 
         if not os.path.exists(directory):
             os.makedirs(directory)

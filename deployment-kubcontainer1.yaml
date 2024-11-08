@@ -33,7 +33,7 @@ spec:
           imagePullPolicy: Always
           volumeMounts:
             - name: data-volume
-              mountPath: /file_Dir
+              mountPath: /krutik_PV_dir
           ports:
             - containerPort: 6000
       volumes:
