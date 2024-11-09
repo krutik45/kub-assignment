@@ -3,7 +3,7 @@ import requests,os
 
 app = Flask(__name__)
 
-#testing first trigger ----->
+
 @app.route('/calculate', methods=['POST'])
 def calculate():
     try:
